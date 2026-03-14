@@ -1,0 +1,24 @@
+мар. 14, 2026 5:00:38 PM ru.itmo.nemat.lab6.server.managers.DumpManager <init>
+SEVERE: Переменная окружения MY_LAB_FILE не найдена!
+мар. 14, 2026 5:00:38 PM ru.itmo.nemat.lab6.server.managers.DumpManager readCollection
+WARNING: Переменная окружения с путем к файлу пуста.
+мар. 14, 2026 5:00:38 PM ru.itmo.nemat.lab6.server.managers.CollectionManager loadCollection
+INFO: Файл пуст или не найден. Создана новая коллекция.
+мар. 14, 2026 5:00:38 PM ru.itmo.nemat.lab6.server.Main main
+INFO: Инициализация завершена. Запуск главного цикла сервера.
+мар. 14, 2026 5:00:38 PM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+SEVERE: Критическая ошибка сетевого слоя сервера
+java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:565)
+	at java.base/sun.nio.ch.Net.bind(Net.java:554)
+	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:636)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:391)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:278)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:171)
+	at ru.itmo.nemat.lab6.server.network.TCPServer.start(TCPServer.java:17)
+	at ru.itmo.nemat.lab6.server.utils.ServerRunner.run(ServerRunner.java:38)
+	at ru.itmo.nemat.lab6.server.Main.main(Main.java:46)
+
+мар. 14, 2026 5:00:38 PM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+INFO: Сервер остановлен.

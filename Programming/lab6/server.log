@@ -1,0 +1,128 @@
+мар. 14, 2026 2:50:13 PM ru.itmo.nemat.lab6.server.managers.DumpManager <init>
+SEVERE: Переменная окружения MY_LAB_FILE не найдена!
+мар. 14, 2026 2:50:13 PM ru.itmo.nemat.lab6.server.managers.DumpManager readCollection
+WARNING: Переменная окружения с путем к файлу пуста.
+мар. 14, 2026 2:50:13 PM ru.itmo.nemat.lab6.server.managers.CollectionManager loadCollection
+INFO: Файл пуст или не найден. Создана новая коллекция.
+мар. 14, 2026 2:50:13 PM ru.itmo.nemat.lab6.server.Main main
+INFO: Инициализация завершена. Запуск главного цикла сервера.
+мар. 14, 2026 2:50:13 PM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+INFO: Сервер успешно запущен. Ожидание подключений...
+мар. 14, 2026 2:50:54 PM ru.itmo.nemat.lab6.server.managers.DumpManager writeCollection
+WARNING: Отмена сохранения: путь к файлу не задан.
+мар. 14, 2026 2:50:54 PM ru.itmo.nemat.lab6.server.managers.CollectionManager saveCollection
+INFO: Коллекция успешно сохранена в файл.
+мар. 14, 2026 2:55:26 PM ru.itmo.nemat.lab6.server.utils.ServerRunner lambda$setupShutdownHook$0
+INFO: Сработал ShutdownHook. Экстренное сохранение коллекции...
+мар. 14, 2026 4:37:11 PM ru.itmo.nemat.lab6.server.managers.DumpManager readCollection
+WARNING: Загрузочный файл не найден: data.json
+мар. 14, 2026 4:37:11 PM ru.itmo.nemat.lab6.server.managers.CollectionManager loadCollection
+INFO: Файл пуст или не найден. Создана новая коллекция.
+мар. 14, 2026 4:37:11 PM ru.itmo.nemat.lab6.server.Main main
+INFO: Инициализация завершена. Запуск главного цикла сервера.
+мар. 14, 2026 4:37:11 PM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+INFO: Сервер успешно запущен. Ожидание подключений...
+мар. 14, 2026 4:37:49 PM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+INFO: Установлено новое соединение: /127.0.0.1
+мар. 14, 2026 4:37:49 PM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Получен запрос: show
+мар. 14, 2026 4:37:49 PM ru.itmo.nemat.lab6.server.managers.ServerCommandManager execute
+INFO: Выполнение команды: show
+мар. 14, 2026 4:37:49 PM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Ответ отправлен клиенту. Статус: true
+мар. 14, 2026 4:38:21 PM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+INFO: Установлено новое соединение: /127.0.0.1
+мар. 14, 2026 4:38:21 PM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Получен запрос: add
+мар. 14, 2026 4:38:21 PM ru.itmo.nemat.lab6.server.managers.ServerCommandManager execute
+INFO: Выполнение команды: add
+мар. 14, 2026 4:38:21 PM ru.itmo.nemat.lab6.server.managers.CollectionManager addToCollection
+INFO: Добавлен новый дракон: ID=100001
+мар. 14, 2026 4:38:21 PM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Ответ отправлен клиенту. Статус: true
+мар. 14, 2026 4:38:37 PM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+INFO: Установлено новое соединение: /127.0.0.1
+мар. 14, 2026 4:38:37 PM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Получен запрос: show
+мар. 14, 2026 4:38:37 PM ru.itmo.nemat.lab6.server.managers.ServerCommandManager execute
+INFO: Выполнение команды: show
+мар. 14, 2026 4:38:37 PM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Ответ отправлен клиенту. Статус: true
+мар. 14, 2026 4:38:45 PM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+INFO: Установлено новое соединение: /127.0.0.1
+мар. 14, 2026 4:38:45 PM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Получен запрос: show
+мар. 14, 2026 4:38:45 PM ru.itmo.nemat.lab6.server.managers.ServerCommandManager execute
+INFO: Выполнение команды: show
+мар. 14, 2026 4:38:45 PM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Ответ отправлен клиенту. Статус: true
+мар. 14, 2026 4:39:11 PM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+INFO: Установлено новое соединение: /127.0.0.1
+мар. 14, 2026 4:39:11 PM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Получен запрос: add
+мар. 14, 2026 4:39:11 PM ru.itmo.nemat.lab6.server.managers.ServerCommandManager execute
+INFO: Выполнение команды: add
+мар. 14, 2026 4:39:11 PM ru.itmo.nemat.lab6.server.managers.CollectionManager addToCollection
+INFO: Добавлен новый дракон: ID=100002
+мар. 14, 2026 4:39:11 PM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Ответ отправлен клиенту. Статус: true
+мар. 14, 2026 4:57:09 PM ru.itmo.nemat.lab6.server.managers.DumpManager <init>
+SEVERE: Переменная окружения MY_LAB_FILE не найдена!
+мар. 14, 2026 4:57:09 PM ru.itmo.nemat.lab6.server.managers.DumpManager readCollection
+WARNING: Переменная окружения с путем к файлу пуста.
+мар. 14, 2026 4:57:09 PM ru.itmo.nemat.lab6.server.managers.CollectionManager loadCollection
+INFO: Файл пуст или не найден. Создана новая коллекция.
+мар. 14, 2026 4:57:09 PM ru.itmo.nemat.lab6.server.Main main
+INFO: Инициализация завершена. Запуск главного цикла сервера.
+мар. 14, 2026 4:57:09 PM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+INFO: Сервер успешно запущен. Ожидание подключений...
+мар. 14, 2026 5:01:28 PM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+INFO: Установлено новое соединение: /127.0.0.1
+мар. 14, 2026 5:01:28 PM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Получен запрос: show
+мар. 14, 2026 5:01:28 PM ru.itmo.nemat.lab6.server.managers.ServerCommandManager execute
+INFO: Выполнение команды: show
+мар. 14, 2026 5:01:29 PM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Ответ отправлен клиенту. Статус: true
+мар. 15, 2026 12:42:30 AM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+INFO: Установлено новое соединение: /127.0.0.1
+мар. 15, 2026 12:42:30 AM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Получен запрос: show
+мар. 15, 2026 12:42:30 AM ru.itmo.nemat.lab6.server.managers.ServerCommandManager execute
+INFO: Выполнение команды: show
+мар. 15, 2026 12:42:30 AM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Ответ отправлен клиенту. Статус: true
+мар. 15, 2026 12:42:43 AM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+INFO: Установлено новое соединение: /127.0.0.1
+мар. 15, 2026 12:42:43 AM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Получен запрос: show
+мар. 15, 2026 12:42:43 AM ru.itmo.nemat.lab6.server.managers.ServerCommandManager execute
+INFO: Выполнение команды: show
+мар. 15, 2026 12:42:43 AM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Ответ отправлен клиенту. Статус: true
+мар. 15, 2026 12:43:11 AM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+INFO: Установлено новое соединение: /127.0.0.1
+мар. 15, 2026 12:43:11 AM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Получен запрос: add
+мар. 15, 2026 12:43:11 AM ru.itmo.nemat.lab6.server.managers.ServerCommandManager execute
+INFO: Выполнение команды: add
+мар. 15, 2026 12:43:11 AM ru.itmo.nemat.lab6.server.managers.CollectionManager addToCollection
+INFO: Добавлен новый дракон: ID=100001
+мар. 15, 2026 12:43:11 AM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Ответ отправлен клиенту. Статус: true
+мар. 15, 2026 12:43:29 AM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+INFO: Установлено новое соединение: /127.0.0.1
+мар. 15, 2026 12:43:29 AM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Получен запрос: show
+мар. 15, 2026 12:43:29 AM ru.itmo.nemat.lab6.server.managers.ServerCommandManager execute
+INFO: Выполнение команды: show
+мар. 15, 2026 12:43:29 AM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Ответ отправлен клиенту. Статус: true
+мар. 15, 2026 12:45:02 AM ru.itmo.nemat.lab6.server.utils.ServerRunner run
+INFO: Установлено новое соединение: /127.0.0.1
+мар. 15, 2026 12:45:02 AM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Получен запрос: show
+мар. 15, 2026 12:45:02 AM ru.itmo.nemat.lab6.server.managers.ServerCommandManager execute
+INFO: Выполнение команды: show
+мар. 15, 2026 12:45:02 AM ru.itmo.nemat.lab6.server.network.RequestHandler handle
+INFO: Ответ отправлен клиенту. Статус: true

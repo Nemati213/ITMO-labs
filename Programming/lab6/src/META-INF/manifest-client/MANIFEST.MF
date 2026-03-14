@@ -1,0 +1,2 @@
+Manifest-Version: 1.0
+Main-Class: ru.itmo.nemat.lab6.client.Main
