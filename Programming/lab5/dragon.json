@@ -1,0 +1,163 @@
+[
+  {
+    "id": 100001,
+    "name": "Ignis",
+    "coordinates": {
+      "x": 10.5,
+      "y": 200
+    },
+    "creationDate": "2026-02-24 18:18:34",
+    "age": 500,
+    "color": "RED",
+    "type": "FIRE",
+    "character": "EVIL",
+    "cave": {
+      "depth": 50,
+      "numberOfTreasures": 1000
+    }
+  },
+  {
+    "id": 100002,
+    "name": "Aqua",
+    "coordinates": {
+      "x": -50.0,
+      "y": 150
+    },
+    "creationDate": "2026-02-24 18:18:34",
+    "age": 150,
+    "color": "BLUE",
+    "type": "WATER",
+    "character": "WISE",
+    "cave": null
+  },
+  {
+    "id": 100003,
+    "name": "Terra",
+    "coordinates": {
+      "x": 543.0,
+      "y": 300
+    },
+    "creationDate": "2026-02-24 18:18:34",
+    "age": 800,
+    "color": "BROWN",
+    "type": "UNDERGROUND",
+    "character": "CHAOTIC",
+    "cave": {
+      "depth": 200,
+      "numberOfTreasures": 5
+    }
+  },
+  {
+    "id": 100004,
+    "name": "Aura",
+    "coordinates": {
+      "x": 0.1,
+      "y": -10
+    },
+    "creationDate": "2026-02-24 18:18:34",
+    "age": 300,
+    "color": "WHITE",
+    "type": "AIR",
+    "character": "WISE",
+    "cave": null
+  },
+  {
+    "id": 100005,
+    "name": "Silva",
+    "coordinates": {
+      "x": 100.0,
+      "y": 100
+    },
+    "creationDate": "2026-02-24 18:18:34",
+    "age": 450,
+    "color": "GREEN",
+    "type": null,
+    "character": null,
+    "cave": {
+      "depth": 10,
+      "numberOfTreasures": null
+    }
+  },
+  {
+    "id": 100006,
+    "name": "Aurum",
+    "coordinates": {
+      "x": 250.0,
+      "y": 500
+    },
+    "creationDate": "2026-02-24 18:18:34",
+    "age": 5000,
+    "color": "BROWN",
+    "type": "FIRE",
+    "character": "WISE",
+    "cave": {
+      "depth": 1000,
+      "numberOfTreasures": 99999
+    }
+  },
+  {
+    "id": 100007,
+    "name": "Discordia",
+    "coordinates": {
+      "x": -200.5,
+      "y": -500
+    },
+    "creationDate": "2026-02-24 18:18:34",
+    "age": 666,
+    "color": "RED",
+    "type": "UNDERGROUND",
+    "character": "CHAOTIC_EVIL",
+    "cave": {
+      "depth": null,
+      "numberOfTreasures": 1
+    }
+  },
+  {
+    "id": 100008,
+    "name": "Glacie",
+    "coordinates": {
+      "x": -10.0,
+      "y": -10
+    },
+    "creationDate": "2026-02-24 18:18:34",
+    "age": 120,
+    "color": "WHITE",
+    "type": "WATER",
+    "character": "WISE",
+    "cave": null
+  },
+  {
+    "id": 100009,
+    "name": "Nox",
+    "coordinates": {
+      "x": 0.0,
+      "y": 0
+    },
+    "creationDate": "2026-02-24 18:18:34",
+    "age": 10000,
+    "color": "BROWN",
+    "type": "UNDERGROUND",
+    "character": "EVIL",
+    "cave": {
+      "depth": 666,
+      "numberOfTreasures": 666
+    }
+  },
+  {
+    "id": 100010,
+    "name": "Ultimus",
+    "coordinates": {
+      "x": 1.0,
+      "y": 1
+    },
+    "creationDate": "2026-02-24 18:18:34",
+    "age": 999999,
+    "color": "WHITE",
+    "type": "AIR",
+    "character": "WISE",
+    "cave": {
+      "depth": 1,
+      "numberOfTreasures": 1
+    }
+  }
+]

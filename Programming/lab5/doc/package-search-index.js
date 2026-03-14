@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"ru.itmo.nemat.lab5"},{"l":"ru.itmo.nemat.lab5.commands"},{"l":"ru.itmo.nemat.lab5.managers"},{"l":"ru.itmo.nemat.lab5.models"},{"l":"ru.itmo.nemat.lab5.utility"}];updateSearchResults();
