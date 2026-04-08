@@ -1,6 +1,5 @@
-Вот стильный и профессиональный `README.md` для твоей 7-й лабы. Он учитывает многомодульность, базу данных и многопоточность.
 
-```markdown
+
 # Distributed Dragon Collection Manager (Lab 7) 🐉❄️
 
 Распределенное клиент-серверное приложение для управления коллекцией объектов `Dragon` с поддержкой многопоточности, авторизации пользователей и хранения данных в реляционной базе данных (PostgreSQL).
@@ -47,19 +46,19 @@
 
 ### 2. Сборка проекта
 В корневой папке проекта выполните:
-```bash
+bash
 mvn clean install
 
 
 ### 3. Запуск Сервера
 Укажите порт через переменную окружения:
-```bash
+bash
 export SERVER_PORT=17532
 java -jar server/target/server-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 ### 4. Запуск Клиента
 Передайте адрес и порт сервера как аргументы:
-```bash
+bash
 java -jar client/target/client-1.0-SNAPSHOT-jar-with-dependencies.jar localhost 17532
 
 ## 🔒 Безопасность
