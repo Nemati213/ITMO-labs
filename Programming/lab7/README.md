@@ -46,21 +46,22 @@
 
 ### 2. Сборка проекта
 В корневой папке проекта выполните:
-bash
+```bash
 mvn clean install
-
+```
 
 ### 3. Запуск Сервера
 Укажите порт через переменную окружения:
-bash
+```bash
 export SERVER_PORT=17532
 java -jar server/target/server-1.0-SNAPSHOT-jar-with-dependencies.jar
+```
 
 ### 4. Запуск Клиента
 Передайте адрес и порт сервера как аргументы:
-bash
+```bash
 java -jar client/target/client-1.0-SNAPSHOT-jar-with-dependencies.jar localhost 17532
-
+```
 ## 🔒 Безопасность
 - Доступ к изменению или удалению объектов имеют только их создатели.
 - Чтение коллекции (`show`, `info` и др.) доступно всем авторизованным пользователям.
