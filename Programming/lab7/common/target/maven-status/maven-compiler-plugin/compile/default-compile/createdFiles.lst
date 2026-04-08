@@ -1,0 +1,17 @@
+ru\itmo\nemat\models\Dragon.class
+ru\itmo\nemat\models\DragonCharacter.class
+ru\itmo\nemat\exceptions\InvalidCommandArgumentException.class
+ru\itmo\nemat\models\Coordinates.class
+ru\itmo\nemat\utils\OutputPrinter.class
+ru\itmo\nemat\utils\ConsolePrinter.class
+ru\itmo\nemat\utils\DragonDTO.class
+ru\itmo\nemat\models\DragonType.class
+ru\itmo\nemat\interaction\Response.class
+ru\itmo\nemat\models\Color.class
+ru\itmo\nemat\utils\ConsoleReader.class
+ru\itmo\nemat\interaction\Request$Builder.class
+ru\itmo\nemat\utils\Serializer.class
+ru\itmo\nemat\models\ResponseStatus.class
+ru\itmo\nemat\models\DragonCave.class
+ru\itmo\nemat\interaction\Request.class
+ru\itmo\nemat\utils\InputReader.class
