@@ -1,0 +1,12 @@
+package ru.itmo.nemat.models;
+
+public enum ResponseStatus {
+    OK,
+    AUTH_SUCCESS,
+    AUTH_ERROR,
+    REGISTRATION_ERROR,
+    VALIDATION_ERROR,
+    PERMISSION_DENIED,
+    ERROR,
+    NOT_FOUND, DRAGON_REMOVED, DRAGON_ADDED, DRAGON_UPDATED, UPDATE_NOTIFICATION;
+}

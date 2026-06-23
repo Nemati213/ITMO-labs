@@ -1,0 +1,110 @@
+апр. 23, 2026 5:36:39 PM ru.itmo.nemat.Main main
+SEVERE: Критическая ошибка при запуске сервера
+java.io.FileNotFoundException: db.properties (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at ru.itmo.nemat.managers.DatabaseManager.<init>(DatabaseManager.java:25)
+	at ru.itmo.nemat.Main.main(Main.java:57)
+
+апр. 23, 2026 6:00:10 PM ru.itmo.nemat.Main main
+SEVERE: Критическая ошибка при запуске сервера
+java.io.FileNotFoundException: db.properties (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at ru.itmo.nemat.managers.DatabaseManager.<init>(DatabaseManager.java:25)
+	at ru.itmo.nemat.Main.main(Main.java:57)
+
+апр. 24, 2026 6:13:13 AM ru.itmo.nemat.Main main
+SEVERE: Критическая ошибка при запуске сервера
+java.io.FileNotFoundException: db.properties (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at ru.itmo.nemat.managers.DatabaseManager.<init>(DatabaseManager.java:25)
+	at ru.itmo.nemat.Main.main(Main.java:57)
+
+апр. 26, 2026 3:50:46 PM ru.itmo.nemat.Main main
+SEVERE: Критическая ошибка при запуске сервера
+java.io.FileNotFoundException: db.properties (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at ru.itmo.nemat.managers.DatabaseManager.<init>(DatabaseManager.java:25)
+	at ru.itmo.nemat.Main.main(Main.java:57)
+
+апр. 28, 2026 1:37:19 PM ru.itmo.nemat.Main main
+SEVERE: Критическая ошибка при запуске сервера
+java.io.FileNotFoundException: db.properties (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at ru.itmo.nemat.managers.DatabaseManager.<init>(DatabaseManager.java:25)
+	at ru.itmo.nemat.Main.main(Main.java:57)
+
+апр. 29, 2026 10:51:47 AM ru.itmo.nemat.Main main
+SEVERE: Критическая ошибка при запуске сервера
+java.io.FileNotFoundException: db.properties (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at ru.itmo.nemat.managers.DatabaseManager.<init>(DatabaseManager.java:25)
+	at ru.itmo.nemat.Main.main(Main.java:57)
+
+апр. 30, 2026 1:04:17 PM ru.itmo.nemat.Main main
+SEVERE: Критическая ошибка при запуске сервера
+java.io.FileNotFoundException: db.properties (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at ru.itmo.nemat.managers.DatabaseManager.<init>(DatabaseManager.java:25)
+	at ru.itmo.nemat.Main.main(Main.java:57)
+
+мая 03, 2026 9:20:35 AM ru.itmo.nemat.Main main
+SEVERE: Критическая ошибка при запуске сервера
+java.io.FileNotFoundException: db.properties (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at ru.itmo.nemat.managers.DatabaseManager.<init>(DatabaseManager.java:25)
+	at ru.itmo.nemat.Main.main(Main.java:57)
+
+мая 03, 2026 3:01:36 PM ru.itmo.nemat.Main main
+SEVERE: Критическая ошибка при запуске сервера
+java.io.FileNotFoundException: db.properties (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at ru.itmo.nemat.managers.DatabaseManager.<init>(DatabaseManager.java:25)
+	at ru.itmo.nemat.Main.main(Main.java:57)
+
+мая 03, 2026 3:01:49 PM ru.itmo.nemat.Main main
+SEVERE: Критическая ошибка при запуске сервера
+java.io.FileNotFoundException: db.properties (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at ru.itmo.nemat.managers.DatabaseManager.<init>(DatabaseManager.java:25)
+	at ru.itmo.nemat.Main.main(Main.java:57)
+
+мая 03, 2026 8:20:04 PM ru.itmo.nemat.Main main
+SEVERE: Критическая ошибка при запуске сервера
+java.io.FileNotFoundException: db.properties (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at ru.itmo.nemat.managers.DatabaseManager.<init>(DatabaseManager.java:25)
+	at ru.itmo.nemat.Main.main(Main.java:57)
+

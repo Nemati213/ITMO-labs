@@ -1,0 +1,143 @@
+
+.root {
+    -fx-background-color: #F3F1E6;
+}
+
+
+.header-text {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #424242;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-max-width: infinity;
+}
+
+
+.text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: #bcbcbc;
+    -fx-border-width: 1;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: 10 15 10 15;
+    -fx-text-fill: #3d405b;
+}
+
+
+.floating-label {
+    -fx-background-color: #FEF6EF;
+    -fx-text-fill: #616161;
+    -fx-font-size: 10px;
+    -fx-padding: 0 5 0 5;
+    -fx-background-radius: 10;
+}
+
+
+.button {
+    -fx-background-color: #FCE2CE;
+    -fx-background-radius: 20;
+    -fx-text-fill: #92613A;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #616161;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-max-width: infinity;
+}
+.button:hover {
+    -fx-background-color: #F7D1B5;
+}
+
+
+.context-menu .menu-item {
+    -fx-padding: 8px 20px;
+    -fx-background-color: transparent;
+}
+
+.context-menu .menu-item .label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+}
+
+
+.context-menu .menu-item:focused,
+.context-menu .menu-item:hover {
+    -fx-background-color: #BDE0C3;
+    -fx-background-radius: 3px;
+}
+
+.register-link {
+    -fx-text-fill: #A67C52;
+    -fx-font-weight: bold;
+    -fx-font-size: 8px;
+    -fx-cursor: hand;
+}
+
+.register-link:hover {
+    -fx-text-fill: #8B6542;
+    -fx-underline: true;
+}
+
+.clickable {
+    -fx-cursor: hand;
+}
+
+
+.clickable:hover {
+    -fx-opacity: 0.7;
+}
+
+.my-dialog {
+    -fx-background-color: #f4f1de;
+}
+.my-dialog .label {
+    -fx-text-fill: #3d405b;
+}
+
+
+.progress-bar {
+    -fx-background-color: transparent;
+    -fx-pref-height: 3px;
+}
+
+
+.progress-bar .track {
+    -fx-background-color: rgba(0, 0, 0, 0.05);
+    -fx-background-insets: 0;
+}
+
+
+.progress-bar .bar {
+    -fx-background-color: #F2CC8F;
+    -fx-background-insets: 0;
+}
+
+
+.progress-bar:indeterminate .bar {
+    -fx-background-color: linear-gradient(to right, transparent, #F2CC8F, transparent);
+}
+
+
+.about-label {
+    -fx-text-fill: #616161;
+    -fx-cursor: hand;
+    -fx-underline: false;
+}
+
+.about-label:hover {
+    -fx-text-fill: #3d405b;
+    -fx-underline: true;
+
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+SVGPath:hover {
+    -fx-fill: #3d405b;
+    -fx-cursor: hand;
+}
