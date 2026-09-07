@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>Лабораторная работа №1</title>
+    <style>
+        :root {
+            --background: #eee8dc;
+            --surface: #fffdf8;
+            --surface-soft: #f8f3e9;
+            --olive: #687052;
+            --olive-light: #e8e4d3;
+            --brown: #6b523f;
+            --brown-dark: #594331;
+            --text: #40382f;
+            --border: #c9bda9;
+            --success: #5f7350;
+            --danger: #9b4039;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            color: var(--text);
+            background-color: var(--background);
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        #page-layout {
+            width: 95%;
+            max-width: 1100px;
+            margin: 0 auto;
+            border-collapse: separate;
+            border-spacing: 12px 16px;
+            table-layout: fixed;
+        }
+
+        #page-layout > tbody > tr > td {
+            padding: 20px;
+            vertical-align: top;
+        }
+
+        .header {
+            display: table;
+            width: 100%;
+            padding: 18px 22px;
+            color: #fffdf7;
+            background-color: var(--olive);
+            border: 1px solid #555c42;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 18px;
+        }
+
+        #info,
+        #github {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        #info span {
+            margin-right: 16px;
+        }
+
+        #github {
+            color: #fffdf7;
+            text-align: right;
+        }
+
+        #github:hover {
+            color: #e4dcc8;
+        }
+
+        #canvas-cell,
+        #form-cell,
+        #results-cell {
+            background-color: var(--surface);
+            border: 1px solid #d2c7b5;
+            border-radius: 8px;
+        }
+
+        #canvas-cell,
+        #form-cell {
+            width: 50%;
+            text-align: center;
+        }
+
+        #graph {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #b9ad9b;
+            border-radius: 6px;
+        }
+
+        fieldset {
+            margin: 0 0 15px;
+            padding: 12px;
+            background-color: var(--surface-soft);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+        }
+
+        legend {
+            padding: 0 6px;
+            color: #66513e;
+            font-weight: bold;
+        }
+
+        #x-group label {
+            display: inline-block;
+            margin: 3px;
+            padding: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #x-group label:hover {
+            background-color: var(--olive-light);
+        }
+
+        input {
+            margin: 5px;
+            padding: 7px;
+            font: inherit;
+        }
+
+        input[type="checkbox"] {
+            accent-color: #747b58;
+        }
+
+        #y-coordinate {
+            width: 100%;
+            max-width: 270px;
+            color: var(--text);
+            background-color: #ffffff;
+            border: 1px solid #b9ad9b;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        #y-coordinate:focus {
+            border-color: #747b58;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 13px;
+            color: #40382f;
+            background-color: #ffffff;
+            border: 1px solid #a99b88;
+            border-radius: 5px;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--olive-light);
+            border-color: #747b58;
+        }
+
+        .r-button.selected {
+            color: #ffffff;
+            background-color: #747b58;
+            border-color: #5e6447;
+        }
+
+        #submit-button {
+            width: 100%;
+            padding: 10px 16px;
+            color: #ffffff;
+            background-color: var(--brown);
+            border-color: var(--brown-dark);
+            font-weight: bold;
+        }
+
+        #submit-button:hover {
+            background-color: #7c624e;
+            border-color: var(--brown-dark);
+        }
+
+        #validation-message {
+            min-height: 20px;
+            margin: 8px 5px 0;
+            color: var(--danger);
+            font-weight: bold;
+        }
+
+        #results-cell {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #resultTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #resultTable th,
+        #resultTable td {
+            padding: 11px;
+            border-bottom: 1px solid #d8cebe;
+            text-align: center;
+        }
+
+        #resultTable th {
+            color: #fffdf7;
+            background-color: #74604d;
+        }
+
+        .result-hit {
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .result-miss {
+            color: var(--danger);
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+<table id="page-layout">
+    <tbody>
+    <tr>
+        <td colspan="2">
+            <header class="header">
+                <div id="info">
+                    <span class="student-name">Mirzozhanov Nematullo</span>
+                    <span class="student-group">P3230</span>
+                    <span class="student-variant">Вариант 22668</span>
+                </div>
+                <a href="https://github.com/nemati213"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   id="github">GitHub</a>
+            </header>
+        </td>
+    </tr>
+
+    <tr>
+        <td id="canvas-cell">
+            <canvas id="graph" width="400" height="400">
+                Ваш браузер не поддерживает Canvas.
+            </canvas>
+        </td>
+
+        <td id="form-cell">
+            <form id="pointForm">
+                <fieldset id="x-group">
+                    <legend>Координата X</legend>
+
+                    <label for="x_minus_3">
+                        <input type="checkbox" name="x-coord" value="-3" id="x_minus_3">
+                        -3
+                    </label>
+                    <label for="x_minus_2">
+                        <input type="checkbox" name="x-coord" value="-2" id="x_minus_2">
+                        -2
+                    </label>
+                    <label for="x_minus_1">
+                        <input type="checkbox" name="x-coord" value="-1" id="x_minus_1">
+                        -1
+                    </label>
+                    <label for="x_0">
+                        <input type="checkbox" name="x-coord" value="0" id="x_0">
+                        0
+                    </label>
+                    <label for="x_1">
+                        <input type="checkbox" name="x-coord" value="1" id="x_1">
+                        1
+                    </label>
+                    <label for="x_2">
+                        <input type="checkbox" name="x-coord" value="2" id="x_2">
+                        2
+                    </label>
+                    <label for="x_3">
+                        <input type="checkbox" name="x-coord" value="3" id="x_3">
+                        3
+                    </label>
+                    <label for="x_4">
+                        <input type="checkbox" name="x-coord" value="4" id="x_4">
+                        4
+                    </label>
+                    <label for="x_5">
+                        <input type="checkbox" name="x-coord" value="5" id="x_5">
+                        5
+                    </label>
+                </fieldset>
+
+                <fieldset id="y-group">
+                    <legend>Координата Y</legend>
+                    <label for="y-coordinate">Введите число от -5 до 3:</label>
+                    <input type="text"
+                           name="y-coordinate"
+                           id="y-coordinate"
+                           placeholder="Например, 1.5"
+                           autocomplete="off">
+                </fieldset>
+
+                <fieldset id="r-group">
+                    <legend>Радиус R</legend>
+                    <button type="button" class="r-button" data-r="1">1</button>
+                    <button type="button" class="r-button" data-r="2">2</button>
+                    <button type="button" class="r-button" data-r="3">3</button>
+                    <button type="button" class="r-button" data-r="4">4</button>
+                    <button type="button" class="r-button" data-r="5">5</button>
+                </fieldset>
+
+                <button type="submit" id="submit-button">Проверить точку</button>
+                <p id="validation-message" role="alert"></p>
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" id="results-cell">
+            <table id="resultTable">
+                <thead>
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Результат</th>
+                    <th>Дата и время</th>
+                </tr>
+                </thead>
+                <tbody id="result-body"></tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
