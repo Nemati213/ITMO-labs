@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>Лабораторная работа №2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            color: #241400;
+            background-color: #8f9e32;
+            background-image: url("images/background.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: "Times New Roman", serif;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        #page-layout {
+            position: relative;
+            z-index: 2;
+            width: 96%;
+            margin: 12px auto;
+            border-spacing: 18px;
+            table-layout: fixed;
+        }
+
+        #page-layout > tbody > tr > td {
+            padding: 7px;
+            vertical-align: top;
+        }
+
+        .header {
+            display: table;
+            width: 390px;
+            padding: 13px;
+            color: #7a006d;
+            background: rgba(184, 194, 83, 0.72);
+            border: 2px solid #a90000;
+            border-radius: 17px;
+            font-family: monospace;
+            font-size: 18px;
+            transform: rotate(-1deg);
+        }
+
+        #info,
+        #github {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        #info span {
+            display: block;
+            margin: 7px 0;
+        }
+
+        #info span:nth-child(2) {
+            color: #b10000;
+            font-size: 21px;
+        }
+
+        #info span:nth-child(3) {
+            margin-left: 22px;
+            color: #001cb8;
+            font-family: "Comic Sans MS", cursive;
+        }
+
+        #github {
+            color: #2a0085;
+            text-align: right;
+        }
+
+        #github:hover {
+            color: red;
+        }
+
+        #canvas-cell {
+            width: 62%;
+            padding-top: 90px !important;
+            text-align: right;
+            transform: rotate(1deg);
+        }
+
+        #graph {
+            width: 350px;
+            height: 350px;
+            background: rgba(211, 239, 255, 0.58);
+            border: 2px solid #111111;
+            border-radius: 18px 3px 22px 6px;
+        }
+
+        #form-cell {
+            width: 38%;
+            padding-top: 35px !important;
+        }
+
+        #pointForm {
+            width: 285px;
+            padding: 8px;
+            background: rgba(48, 94, 66, 0.7);
+            border: 2px solid #253b25;
+        }
+
+        fieldset {
+            margin: 7px 0 13px;
+            padding: 8px;
+        }
+
+        fieldset:nth-child(1) {
+            color: #002b17;
+            background: rgba(182, 255, 0, 0.45);
+            border: 1px dotted #ff003c;
+            font-family: Arial, sans-serif;
+        }
+
+        fieldset:nth-child(2) {
+            color: white;
+            background: rgba(91, 0, 128, 0.48);
+            border: 3px double #00ff88;
+            font-family: "Courier New", monospace;
+            transform: translateX(9px);
+        }
+
+        fieldset:nth-child(3) {
+            color: #001388;
+            background: rgba(255, 127, 0, 0.46);
+            border: 2px dashed #150021;
+            font-family: "Comic Sans MS", cursive;
+            transform: translateX(-6px) rotate(1deg);
+        }
+
+        legend {
+            padding: 1px 4px;
+            color: #5c004e;
+            background: #c7ff00;
+            font-family: Georgia, serif;
+            font-size: 17px;
+        }
+
+        #x-group label {
+            display: inline-block;
+            margin: 2px;
+            color: #101010;
+            cursor: pointer;
+        }
+
+        #x-group label:nth-of-type(2n) {
+            color: #d00000;
+            transform: translateY(3px);
+        }
+
+        #x-group label:hover {
+            color: #ff00aa;
+        }
+
+        input {
+            margin: 5px;
+            padding: 6px;
+        }
+
+        input[type="radio"] {
+            accent-color: #004cff;
+        }
+
+        #y-coordinate,
+        #r-coordinate {
+            display: block;
+            width: 90%;
+            margin: 8px auto;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        #y-coordinate {
+            color: white;
+            background: rgba(255, 0, 94, 0.63);
+            border: 1px solid yellow;
+            font-family: "Times New Roman", serif;
+        }
+
+        #r-coordinate {
+            color: #31003d;
+            background: rgba(0, 255, 213, 0.63);
+            border: 3px inset #ff6800;
+            font-family: monospace;
+        }
+
+        #y-coordinate:focus,
+        #r-coordinate:focus {
+            outline: 2px dashed red;
+        }
+
+        #submit-button {
+            width: 105%;
+            margin: 9px 0 3px -2%;
+            padding: 13px 5px;
+            color: #ffff00;
+            background: #ff0000;
+            border: 5px outset #ff7b00;
+            border-radius: 3px 18px 2px 9px;
+            font-family: Impact, "Arial Black", sans-serif;
+            font-size: 24px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transform: rotate(2deg);
+        }
+
+        #submit-button:hover {
+            color: #ff0000;
+            background: #ffff00;
+            border-color: #00ff00;
+        }
+
+        #submit-button:disabled {
+            cursor: wait;
+            opacity: 0.6;
+        }
+
+        #validation-message {
+            min-height: 18px;
+            margin: 8px 0 0;
+            color: #ffea00;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        #validation-message:not(:empty) {
+            padding: 7px;
+            background: rgba(145, 0, 0, 0.9);
+            border: 1px solid white;
+        }
+
+        body.alarm-active::before {
+            content: "⚠ WARNING ⚠\A" attr(data-error-message);
+            position: fixed;
+            top: 13px;
+            left: 50%;
+            z-index: 10001;
+            width: min(680px, 88vw);
+            padding: 9px 15px 13px;
+            color: #ffea00;
+            background: rgba(145, 0, 0, 0.9);
+            border: 3px solid #ffea00;
+            font-family: Impact, sans-serif;
+            font-size: 21px;
+            letter-spacing: 5px;
+            text-align: center;
+            white-space: pre-line;
+            transform: translateX(-50%) rotate(-1deg);
+        }
+
+        body.alarm-active::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            pointer-events: none;
+            border: 13px solid red;
+            box-shadow: inset 0 0 65px 22px red;
+            animation: alarm-flash 0.32s steps(2, end) infinite;
+        }
+
+        #results-cell {
+            padding-top: 34px !important;
+        }
+
+        #resultTable {
+            width: 73%;
+            margin-left: 3%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.6);
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            transform: rotate(0.5deg);
+        }
+
+        #resultTable th,
+        #resultTable td {
+            padding: 7px;
+            border: 1px solid #483000;
+            text-align: center;
+        }
+
+        #resultTable th {
+            color: #640050;
+            background: #9dff00;
+            font-family: Georgia, serif;
+        }
+
+        #resultTable th:nth-child(2n) {
+            background: #ff4da6;
+        }
+
+        #resultTable tbody > tr:nth-child(odd) {
+            background: rgba(255, 231, 0, 0.67);
+        }
+
+        #resultTable tbody > tr:hover {
+            color: white;
+            background: #6f008e;
+        }
+
+        .result-hit {
+            color: green;
+        }
+
+        .result-miss {
+            color: red;
+        }
+
+        .background-drone {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 125px;
+            height: auto;
+            pointer-events: none;
+            user-select: none;
+            filter: drop-shadow(0 0 7px #9dff00);
+            will-change: transform;
+        }
+
+        .falling-warhead {
+            position: fixed;
+            top: -190px;
+            z-index: 10002;
+            width: 105px;
+            height: auto;
+            pointer-events: none;
+            filter: drop-shadow(0 0 9px #b6ff00);
+        }
+
+        .mini-explosion {
+            position: fixed;
+            z-index: 10003;
+            pointer-events: none;
+            color: #ff0000;
+            font-family: Impact, sans-serif;
+            font-size: 35px;
+            font-weight: bold;
+            text-shadow: 0 0 8px #ffff00, 0 0 19px #ff4d00;
+            white-space: nowrap;
+            animation: mini-boom 0.95s ease-out forwards;
+        }
+
+        .laughing-king {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            z-index: 10002;
+            width: min(330px, 64vw);
+            height: auto;
+            pointer-events: none;
+            filter: drop-shadow(0 0 18px #ff00ff);
+            animation: king-laugh 0.22s steps(2, end) infinite;
+        }
+
+        @keyframes alarm-flash {
+            from {
+                opacity: 0.2;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes mini-boom {
+            from {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(0.2) rotate(-20deg);
+            }
+            45% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(2.2) rotate(13deg);
+            }
+            to {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(3.8) rotate(-9deg);
+            }
+        }
+
+        @keyframes king-laugh {
+            from {
+                transform: translate(-51%, -49%) rotate(-7deg) scale(0.96);
+            }
+            to {
+                transform: translate(-49%, -51%) rotate(7deg) scale(1.08);
+            }
+        }
+
+        @media (max-width: 760px) {
+            #page-layout > tbody > tr > td {
+                display: block;
+                width: 100%;
+            }
+
+            .header,
+            #pointForm,
+            #resultTable {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            #canvas-cell {
+                padding-top: 10px !important;
+                text-align: center;
+            }
+
+            #graph {
+                width: 100%;
+                max-width: 350px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<table id="page-layout">
+    <tbody>
+    <tr>
+        <td colspan="2">
+            <header class="header">
+                <div id="info">
+                    <span class="student-name">Mirzozhanov Nematullo</span>
+                    <span class="student-group">P3230</span>
+                    <span class="student-variant">Вариант 23456</span>
+                </div>
+                <a href="https://github.com/nemati213"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   id="github">GitHub</a>
+            </header>
+        </td>
+    </tr>
+
+    <tr>
+        <td id="canvas-cell">
+            <canvas id="graph" width="400" height="400">
+                Ваш браузер не поддерживает Canvas.
+            </canvas>
+        </td>
+
+        <td id="form-cell">
+            <form id="pointForm">
+                <fieldset id="x-group">
+                    <legend>Координата X</legend>
+
+                    <label for="x_minus_2">
+                        <input type="radio" name="x-coord" value="-2" id="x_minus_2">
+                        -2
+                    </label>
+                    <label for="x_minus_1_5">
+                        <input type="radio" name="x-coord" value="-1.5" id="x_minus_1_5">
+                        -1.5
+                    </label>
+                    <label for="x_minus_1">
+                        <input type="radio" name="x-coord" value="-1" id="x_minus_1">
+                        -1
+                    </label>
+                    <label for="x_minus_0_5">
+                        <input type="radio" name="x-coord" value="-0.5" id="x_minus_0_5">
+                        -0.5
+                    </label>
+                    <label for="x_0">
+                        <input type="radio" name="x-coord" value="0" id="x_0">
+                        0
+                    </label>
+                    <label for="x_0_5">
+                        <input type="radio" name="x-coord" value="0.5" id="x_0_5">
+                        0.5
+                    </label>
+                    <label for="x_1">
+                        <input type="radio" name="x-coord" value="1" id="x_1">
+                        1
+                    </label>
+                    <label for="x_1_5">
+                        <input type="radio" name="x-coord" value="1.5" id="x_1_5">
+                        1.5
+                    </label>
+                    <label for="x_2">
+                        <input type="radio" name="x-coord" value="2" id="x_2">
+                        2
+                    </label>
+                </fieldset>
+
+                <fieldset id="y-group">
+                    <legend>Координата Y</legend>
+                    <label for="y-coordinate">Введите число от -3 до 3 включительно:</label>
+                    <input type="text"
+                           name="y-coordinate"
+                           id="y-coordinate"
+                           placeholder="Например, 1.5"
+                           autocomplete="off">
+                </fieldset>
+
+                <fieldset id="r-group">
+                    <legend>Радиус R</legend>
+                    <label for="r-coordinate">Введите число от 2 до 5 включительно:</label>
+                    <input type="text"
+                           name="r-coordinate"
+                           id="r-coordinate"
+                           placeholder="Например, 3.5"
+                           autocomplete="off">
+                </fieldset>
+
+                <button type="submit" id="submit-button">Проверить точку</button>
+                <p id="validation-message" role="alert"></p>
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" id="results-cell">
+            <table id="resultTable">
+                <thead>
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>R</th>
+                    <th>Результат</th>
+                    <th>Дата и время</th>
+                    <th>Время выполнения</th>
+                </tr>
+                </thead>
+                <tbody id="result-body"></tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

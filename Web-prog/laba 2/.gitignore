@@ -1,0 +1,3 @@
+httpd.conf
+*.log
+*.pid
